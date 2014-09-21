@@ -1,0 +1,68 @@
+---
+title       : Interactive Clustering Application
+subtitle    : Built with Shiny by RStudio with Iris Data
+author      : Olivia Zhao
+job         : 
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+## Idea Generation
+
+### When building clusteirng models, does it bother you when you are facing the scenarios below?
+
+1. Tune the parameters a lot of times to get an ideal result
+2. Regenerate the visualizations every time with a new model
+3. Compare different model results seperately
+
+--- .class #id 
+
+## To Make Life Easier with Clustering
+
+### We have built an application:
+
+1. Allowing users to manipulate number of clusters and sample size selected for visualization
+2. With interactive visualization automatically refreshed when parameters are updated
+3. Incorporating two clustering methods for easier comparison
+
+--- .class #id 
+
+## Iris Data Clustering
+K-means clustering confusion matrix: 3 clusters
+```{r,echo=FALSE,results='markup'}
+# k-means clustering
+data <- iris
+data$Species <- NULL
+km <- kmeans(data,3)
+table(iris$Species,Cluster=km$cluster)
+```
+Hierarchical clustering confusion matrix: 3 clusters
+```{r,echo=FALSE,results='markup'}
+# hierarchical clustering
+hc <- hclust(dist(data),method="ave")
+groups <- cutree(hc,k=3)
+table(iris$Species,Cluster=groups)
+```     
+The above results show that cluster 'Setosa' can be easily seperated from the other two clusters, and that clusters 'Versicolor' and 'Virginica' are to a small degree overlapped with each other.
+
+--- .class #id 
+
+## Usage and Improvement
+
+### Usage
+
+The application can be used on other datasets with/without class labels for exploring purpose. It will be a good application in customer segmentation and allow user to get a quick answer via visualization. 
+
+### Improvement
+
+1. Add data exploratory summary and visualization
+2. Add supervised learning analysis
+
+
+
+
+
