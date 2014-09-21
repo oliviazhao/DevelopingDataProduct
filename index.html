@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Interactive Clustering Application</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Interactive Clustering Application">
+  <meta name="author" content="Olivia Zhao">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Interactive Clustering Application</h1>
+    <h2>Built with Shiny by RStudio with Iris Data</h2>
+    <p>Olivia Zhao<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Idea Generation</h2>
+  </hgroup>
+  <article data-timings="">
+    <h3>When building clusteirng models, does it bother you when you are facing the scenarios below?</h3>
+
+<ol>
+<li>Tune the parameters a lot of times to get an ideal result</li>
+<li>Regenerate the visualizations every time with a new model</li>
+<li>Compare different model results seperately</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>To Make Life Easier with Clustering</h2>
+  </hgroup>
+  <article data-timings="">
+    <h3>We have built an application:</h3>
+
+<ol>
+<li>Allowing users to manipulate number of clusters and sample size selected for visualization</li>
+<li>With interactive visualization automatically refreshed when parameters are updated</li>
+<li>Incorporating two clustering methods for easier comparison</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Iris Data Clustering</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>K-means clustering confusion matrix: 3 clusters</p>
+
+<pre><code>##             Cluster
+##               1  2  3
+##   setosa      0 50  0
+##   versicolor  2  0 48
+##   virginica  36  0 14
+</code></pre>
+
+<p>Hierarchical clustering confusion matrix: 3 clusters</p>
+
+<pre><code>##             Cluster
+##               1  2  3
+##   setosa     50  0  0
+##   versicolor  0 50  0
+##   virginica   0 14 36
+</code></pre>
+
+<p>The above results show that cluster &#39;Setosa&#39; can be easily seperated from the other two clusters, and that clusters &#39;Versicolor&#39; and &#39;Virginica&#39; are to a small degree overlapped with each other.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Usage and Improvement</h2>
+  </hgroup>
+  <article data-timings="">
+    <h3>Usage</h3>
+
+<p>The application can be used on other datasets with/without class labels for exploring purpose. It will be a good application in customer segmentation and allow user to get a quick answer via visualization. </p>
+
+<h3>Improvement</h3>
+
+<ol>
+<li>Add data exploratory summary and visualization</li>
+<li>Add supervised learning analysis</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Idea Generation'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='To Make Life Easier with Clustering'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Iris Data Clustering'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Usage and Improvement'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
